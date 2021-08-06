@@ -1,0 +1,30 @@
+ul.MainMenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+  color: #ffdad0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  ul.MainMenu {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  ul.MainMenu {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  ul.MainMenu {
+    font-size: 59px;
+  }
+}

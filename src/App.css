@@ -1,38 +1,73 @@
 .App {
   text-align: center;
+  background-color: #202a35;
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#opening {
+  position: fixed;
+  background-color: rgba(32,42,53,1);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation-delay:4s;
+  animation-duration:2s;
+  animation-name: opening-background;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#opening > h1 {
+  width: auto;
+  text-align: center;
+  margin-top: 200%;
+  animation-duration: 4s;
+  animation-name: opening-word;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  #opening > h1 {
+    font-size: 28px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  #opening > h1 {
+    font-size: 40px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 900px) {
+  #opening > h1 {
+    font-size: 59px;
+  }
+}
+@keyframes opening-word {
+  0% {
+    background: linear-gradient(0.125turn, #2a319b 20%, #703270 50%, #5ab0ff 75%);
+    margin-top: 150%;
+    -webkit-background-clip: text;
+  }
+  20% {
+    margin-top: 40vh;
+  }
+  80% {
+    margin-top: 40vh;
+  }
+  100% {
+    margin-top: -60%;
+    background: linear-gradient(0.125turn, #2a319b 20%, #703270 50%, #5ab0ff 75%);
+    -webkit-background-clip: text;
+
+  }
 }
 
-@keyframes App-logo-spin {
+@keyframes opening-background {
   from {
-    transform: rotate(0deg);
+    background: rgba(32,42,53,1);
   }
   to {
-    transform: rotate(360deg);
+    background: rgba(32,42,52,0);
   }
 }
