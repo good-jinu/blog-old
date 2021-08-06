@@ -11,20 +11,8 @@ ul.MainMenu {
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-  ul.MainMenu {
-    font-size: 28px;
-  }
+ul.MainMenu a {
+  color: #ffdad0;
+  text-decoration: none;
 }
 
-@media screen and (min-width: 480px) and (max-width: 900px) {
-  ul.MainMenu {
-    font-size: 40px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  ul.MainMenu {
-    font-size: 59px;
-  }
-}

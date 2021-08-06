@@ -10,15 +10,18 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   animation-delay:4s;
-  animation-duration:2s;
+  animation-duration:1.25s;
   animation-name: opening-background;
 }
 
 #opening > h1 {
   width: auto;
   text-align: center;
-  margin-top: 200%;
   animation-duration: 4s;
   animation-name: opening-word;
   -webkit-background-clip: text;
@@ -27,36 +30,36 @@
   font-weight: bold;
 }
 @media screen and (max-width: 480px) {
-  #opening > h1 {
+  .responsive-font {
     font-size: 28px;
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 900px) {
-  #opening > h1 {
+  .responsive-font {
     font-size: 40px;
   }
 }
 
 @media screen and (min-width: 900px) {
-  #opening > h1 {
+  .responsive-font {
     font-size: 59px;
   }
 }
 @keyframes opening-word {
   0% {
     background: linear-gradient(0.125turn, #2a319b 20%, #703270 50%, #5ab0ff 75%);
-    margin-top: 150%;
+    margin-top: 1100px;
     -webkit-background-clip: text;
   }
   20% {
-    margin-top: 40vh;
+    margin-top: 0;
   }
   80% {
-    margin-top: 40vh;
+    margin-top: 0;
   }
   100% {
-    margin-top: -60%;
+    margin-top: -1100px;
     background: linear-gradient(0.125turn, #2a319b 20%, #703270 50%, #5ab0ff 75%);
     -webkit-background-clip: text;
 

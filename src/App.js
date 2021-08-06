@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import { Home } from './pages';
+import { Home, About } from './pages';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,11 +17,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <div id="opening" onAnimationEnd={this.openingEnd}>
-          <h1>Welcome<br/>to<br/>my blog</h1>
+          <h1 className="responsive-font">Welcome<br/>to<br/>my blog</h1>
         </div>
-        <Route exact path="/">
-          <Home />
-        </Route>
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={About}/>
       </div>
     );
   }
