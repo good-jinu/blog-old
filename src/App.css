@@ -17,6 +17,7 @@
   animation-delay:4s;
   animation-duration:1.25s;
   animation-name: opening-background;
+  z-index: 1;
 }
 
 #opening > h1 {

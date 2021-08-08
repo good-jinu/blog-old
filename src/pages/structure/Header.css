@@ -1,0 +1,15 @@
+header {
+  position: fixed;
+  width: 100vw;
+  height: 40px;
+  background-color: transparent;
+  display:flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.toHome a{
+  color: white;
+  text-decoration: none;
+}
