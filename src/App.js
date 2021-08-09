@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import { Home, About, Contents } from './pages';
+import { Home, About, Contents, More } from './pages';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,7 +22,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
-          <Route path="/contnets"  component={Contents}/>
+          <Route path="/contents"  component={Contents}/>
+          <Route path="/more" component={More}/>
         </Switch>
       </div>
     );

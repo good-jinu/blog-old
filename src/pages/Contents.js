@@ -1,4 +1,4 @@
-import Header from './structure/Header';
+import { Header, Footer } from './structure';
 import Datas from './contents-data/posted-data';
 import './Contents.css';
 
@@ -23,6 +23,7 @@ const Contents = () => {
           {showPostings()}
         </article>
       </section>
+      <Footer />
     </div>
   );
 }

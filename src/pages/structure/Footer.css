@@ -1,0 +1,17 @@
+section {
+  min-height: calc(100vh - 250px);
+}
+footer {
+  margin-top: 12px;
+  height: 250px;
+  padding : 30px 6px;
+  background-color: #202020;
+  color: #d2cac0;
+  text-align: left;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

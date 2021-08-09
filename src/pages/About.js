@@ -1,4 +1,4 @@
-import Header from './structure/Header';
+import { Header, Footer } from './structure';
 import './About.css';
 
 const About = () => {
@@ -31,6 +31,7 @@ const About = () => {
           </div>
         </article>
       </section>
+      <Footer />
     </div>
   );
 }
