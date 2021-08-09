@@ -8,7 +8,7 @@ class Home extends React.Component {
     return (
       <ul className="MainMenu responsive-font">
         <li><Link to="/about">About me</Link></li>
-        <li>Contents</li>
+        <li><Link to="/contents">Contents</Link></li>
         <li>More</li>
       </ul>
     );

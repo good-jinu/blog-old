@@ -1,0 +1,44 @@
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.posting-board {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.posting {
+  padding: 3px 8px;
+  background-color: #ececb9;
+  box-shadow: 6px 5px 5px black;
+  text-align: left;
+}
+
+.posting > h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.posting > p {
+  margin: 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .posting {
+    margin: 10px 5px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .posting {
+    margin: 15px 50px;
+  }
+}
