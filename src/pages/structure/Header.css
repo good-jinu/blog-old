@@ -1,15 +1,13 @@
-header {
+#header_navbar {
   position: fixed;
-  width: 100vw;
-  height: 40px;
+  height: 30px;
   background-color: transparent;
   display:flex;
   justify-content: flex-start;
-  padding-left: 10px;
-  padding-right: 10px;
+  align-items: center;
+  transition: margin-top 0.3s;
 }
 
-.toHome a{
-  color: white;
-  text-decoration: none;
+#header_navbar a {
+  margin-left: 5px;
 }
