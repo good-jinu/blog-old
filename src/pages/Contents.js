@@ -1,31 +1,55 @@
+import React from 'react';
 import { Header, Footer } from './structure';
-import Datas from './contents-data/posted-data';
+import axios from 'axios';
 import './Contents.css';
 
-const Contents = () => {
-  const showPostings = () => {
-    var rows = [];
-    for(let iii=Datas.length-1; iii>=0; iii--) {
-      rows.push(
-	<div className="posting">
-	  <h1>{Datas[iii].title}</h1>
-	  <p>{Datas[iii].body}</p>
-	</div>
-      );
-    }
-    return rows
-  }
-  return (
-    <div className="mainbody">
-      <Header />
-      <section>
-        <article className="posting-board">
-          {showPostings()}
-        </article>
-      </section>
-      <Footer />
-    </div>
-  );
+class Contents extends React.Component {
+  constructor(props) {
+		super(props);
+		this.state = {
+			posts: []
+		};
+		this.getDatasFromServer = this.getDatasFromServer.bind(this);
+	}
+
+	componentDidMount() {
+		this.getDatasFromServer();
+	}
+
+	async getDatasFromServer() {
+		var rows = [];
+		await axios.get('/contents-datas.json')
+		.then((res)=> {
+			for(let iii=res.data.length-1;iii>=0; iii--) {
+				rows.push(res.data[iii]);
+			}
+		})
+		.catch((err)=>{
+			console.log(err);
+		});
+		await this.setState({posts: rows});
+	}
+
+	render() {
+		const showPostings = this.state.posts.map((item, index)=>
+			<div className="posting" key={index.toString()}>
+				<h1>{item.title}</h1>
+				<p>{item.body}</p>
+			</div>
+		);
+
+		return (
+			<div className="mainbody">
+				<Header />
+					<section>
+						<article className="posting-board">
+							{showPostings}
+						</article>
+					</section>
+				<Footer />
+			</div>
+		);
+	}
 }
 
 export default Contents;

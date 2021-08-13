@@ -9,5 +9,10 @@
 }
 
 #header_navbar a {
+	display: flex;
+	align-items: center;
+}
+
+#header_navbar img {
   margin-left: 5px;
 }

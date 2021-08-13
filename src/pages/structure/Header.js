@@ -23,10 +23,10 @@ class NavbarController {
 
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.navController = new NavbarController();
+	constructor(props) {
+		super(props);
+		this.navController = new NavbarController();
+		this.goBack = this.goBack.bind(this);
   }
 
   componentDidMount() {
@@ -36,10 +36,13 @@ class Header extends React.Component {
     window.removeEventListener('scroll', this.navController.handleNavBar);
   }
 
+	goBack() {
+		window.history.back();
+	}
   render() {
     return (
       <header id="header_navbar">
-        <a href="javascript:window.history.back();"><img src={Backico} alt="back"/></a>
+        <img src={Backico} alt="back" onClick={this.goBack}/>
         <Link to="/"><img src={Homeico} alt="home"/></Link>
       </header>
     );
