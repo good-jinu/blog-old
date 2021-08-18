@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Header, Footer } from './structure';
 import axios from 'axios';
 import './Contents.css';
@@ -18,7 +19,7 @@ class Contents extends React.Component {
 
 	async getDatasFromServer() {
 		var rows = [];
-		await axios.get('/contents-datas.json')
+		await axios.get('/blog/contents-datas.json')
 		.then((res)=> {
 			for(let iii=res.data.length-1;iii>=0; iii--) {
 				rows.push(res.data[iii]);
@@ -32,10 +33,12 @@ class Contents extends React.Component {
 
 	render() {
 		const showPostings = this.state.posts.map((item, index)=>
-			<div className="posting" key={index.toString()}>
-				<h1>{item.title}</h1>
-				<p>{item.body}</p>
-			</div>
+			<Link to={item.cid.toString()}>
+				<div className="posting" key={index.toString()}>
+					<h1>{item.title}</h1>
+					<p>{item.desc}</p>
+				</div>
+			</Link>
 		);
 
 		return (
