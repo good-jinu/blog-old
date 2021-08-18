@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import { Home, About, ContentID, Contents, More } from './pages';
+import { Home } from './pages';
+import routes from './routes';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,10 +22,7 @@ class App extends React.Component {
         </div>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
-					<Route path="/contents/:cid" component={ContentID}/>
-          <Route path="/contents"  component={Contents}/>
-          <Route path="/more" component={More}/>
+          <Route path="/:pth" component={routes}/>
         </Switch>
       </div>
     );

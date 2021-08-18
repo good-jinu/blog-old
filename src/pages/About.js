@@ -1,10 +1,8 @@
-import { Header, Footer } from './structure';
 import './About.css';
 
 const About = () => {
   return (
     <div className="mainbody">
-      <Header />
       <section>
         <article className="whoAmI responsive-font">
           <div>LEE JIN WOO</div>
@@ -31,7 +29,6 @@ const About = () => {
           </div>
         </article>
       </section>
-      <Footer />
     </div>
   );
 }

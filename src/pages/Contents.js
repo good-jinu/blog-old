@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header, Footer } from './structure';
 import axios from 'axios';
 import './Contents.css';
 
@@ -33,7 +32,7 @@ class Contents extends React.Component {
 
 	render() {
 		const showPostings = this.state.posts.map((item, index)=>
-			<Link to={item.cid.toString()}>
+			<Link to={"/contents/"+item.cid.toString()}>
 				<div className="posting" key={index.toString()}>
 					<h1>{item.title}</h1>
 					<p>{item.desc}</p>
@@ -43,13 +42,11 @@ class Contents extends React.Component {
 
 		return (
 			<div className="mainbody">
-				<Header />
 					<section>
 						<article className="posting-board">
 							{showPostings}
 						</article>
 					</section>
-				<Footer />
 			</div>
 		);
 	}
