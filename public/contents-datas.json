@@ -2,18 +2,21 @@
   {
 		"cid": 0,
     "title": "This is first post",
-    "desc": "It is my first post. do you like it?"
+    "desc": "It is my first post. do you like it?",
+		"htm": "0.htm"
   },
 
   {
 		"cid": 1,
     "title": "Quantum compiling by deep reinforcement learning",
-		"desc": "reinforcement learning is challenging on Quantum compiling"
+		"desc": "reinforcement learning is challenging on Quantum compiling",
+		"htm": "1.htm"
   },
 
   {
 		"cid": 2,
     "title": "The effect of ultrasmall grain sizes on the thermal conductivity of nanocrystalline silicon thin films",
-		"desc": "this article is sooooo awesome!"
+		"desc": "this article is sooooo awesome!",
+		"htm": "2.htm"
   }
 ]
