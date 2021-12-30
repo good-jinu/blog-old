@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #unity-container {
+    position: absolute;
+  }
+  #unity-container.unity-desktop {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #unity-container.unity-mobile {
+    width: 100%;
+    height: 100%;
+  }
+  #unity-canvas {
+    background: #231f20;
+  }
+  .unity-mobile #unity-canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #cf2 {
+    position: relative;
+    height: auto;
+    width: 30vw;
+    margin: 36vh auto;
+  }
+  
+  #cf2 img {
+    width: 30vw;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  #cf2 img.transparent {
+    opacity: 0;
+  }
+  
+  #cf2 img {
+    animation-name: cf4FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 22s;
+    animation-direction: alternate;
+  }
+  
+  @keyframes cf4FadeInOut {
+    0% {
+      opacity: 1;
+    }
+    17% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    92% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #cf2 img:nth-of-type(1) {
+    animation-delay: 16s;
+  }
+  #cf2 img:nth-of-type(2) {
+    animation-delay: 12s;
+  }
+  #cf2 img:nth-of-type(3) {
+    animation-delay: 8s;
+  }
+  #cf2 img:nth-of-type(4) {
+    animation-delay: 4s;
+  }
+  #cf2 img:nth-of-type(5) {
+    animation-delay: 0;
+  }
+  
+  .layui-layer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: black;
+  }
+  
+  .loader {
+    border: 9px solid #f3f3f3; /* Light grey */
+    border-top: 9px solid black; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .layui-layer-setwin .layui-layer-close2 {
+    transform: scale(1.2, 1.2);
+  }
+  
+  /* 
+  @media only screen and (hover: none) {
+    .layui-layer-setwin .layui-layer-close2 {
+      transform: scale(1.5, 1.5);
+    }
+  } */
+  
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    #cf2 {
+      position: relative;
+      width: 50vw;
+      height: 20vh;
+      margin: 10vh auto;
+    }
+    #cf2 img {
+      width: 50vw;
+    }
+    .layui-layer-setwin .layui-layer-close2 {
+      transform: scale(1.2, 1.2);
+    }
+  }
+  
+  @media only screen and (max-device-width: 767px) {
+    #cf2 {
+      position: relative;
+      height: auto;
+      width: 80vw;
+      margin: 30vh auto;
+    }
+  
+    #cf2 img {
+      width: 80vw;
+    }
+    .layui-layer-setwin .layui-layer-close2 {
+      transform: scale(2, 2);
+    }
+  }
