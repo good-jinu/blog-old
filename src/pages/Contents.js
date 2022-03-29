@@ -32,7 +32,7 @@ class Contents extends React.Component {
 
 	render() {
 		const showPostings = this.state.posts.map((item, index)=>
-			<Link to={"/contents/"+item.cid.toString()} key={index.toString()}>
+			<Link to={"/contents/"+(this.state.posts.length-index-1).toString()} key={index.toString()}>
 				<div className="posting">
 					<h1>{item.title}</h1>
 					<p>{item.desc}</p>

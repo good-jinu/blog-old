@@ -15,6 +15,8 @@ const About = () => {
             <ul>
               <li>Trip-plannig-service</li>
               <li>Blog</li>
+              <li>Unity game development</li>
+              <li>jetson nano</li>
             </ul>
           </div>
           <div>
@@ -22,10 +24,12 @@ const About = () => {
             <ul>
               <li>Web programming</li>
               <li>Machine Learning</li>
+              <li>Unity</li>
+              <li>jetson nano</li>
             </ul>
           </div>
           <div>
-            <h1>Currently i'm working at<br/>kaden96</h1>
+            <h1>Currently i'm working at<br/>none</h1>
           </div>
         </article>
       </section>

@@ -15,9 +15,10 @@ section {
 
 .posting {
   padding: 3px 8px;
-  background-color: #ececb9;
+  background-color: #080f0f;
   box-shadow: 6px 5px 5px black;
   text-align: left;
+	color: #c2d0d0;
 }
 
 .posting > h1 {

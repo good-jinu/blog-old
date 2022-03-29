@@ -1,22 +1,19 @@
 [
   {
-		"cid": 0,
-    "title": "This is first post",
-    "desc": "It is my first post. do you like it?",
-		"htm": "0.htm"
+    "title": "Basic and Markdown",
+    "desc": "What i learned in first git class",
+		"md": "https://raw.githubusercontent.com/good-jinu/TIL/master/git/basic%26markdown.md"
   },
 
   {
-		"cid": 1,
-    "title": "Quantum compiling by deep reinforcement learning",
-		"desc": "reinforcement learning is challenging on Quantum compiling",
-		"htm": "1.htm"
+    "title": "switch and restore",
+		"desc": "Alternative methods of checkout",
+		"md": "https://raw.githubusercontent.com/good-jinu/TIL/master/git/switch%26restore.md"
   },
 
   {
-		"cid": 2,
-    "title": "The effect of ultrasmall grain sizes on the thermal conductivity of nanocrystalline silicon thin films",
-		"desc": "this article is sooooo awesome!",
-		"htm": "2.htm"
+    "title": "Dijkstra algorithm",
+		"desc": "Find the shortest paths from source to all vertices",
+		"md": "https://raw.githubusercontent.com/good-jinu/TIL/master/algorithm/dijkstra.md"
   }
 ]
