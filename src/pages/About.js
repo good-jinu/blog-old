@@ -1,40 +1,47 @@
-import './About.css';
+import React from 'react';
+import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import './CSS/About.css';
+import './CSS/Poststyle.css';
 
-const About = () => {
-  return (
-    <div className="mainbody">
-      <section>
-        <article className="whoAmI responsive-font">
-          <div>LEE JIN WOO</div>
-          <div>University student</div>
-          <div>Busan, Korea</div>
-        </article>
-        <article className="myworks">
-          <div>
-            <h1>Study project</h1>
-            <ul>
-              <li>Trip-plannig-service</li>
-              <li>Blog</li>
-              <li>Unity game development</li>
-              <li>jetson nano</li>
-            </ul>
-          </div>
-          <div>
-            <h1>Recently studying</h1>
-            <ul>
-              <li>Web programming</li>
-              <li>Machine Learning</li>
-              <li>Unity</li>
-              <li>jetson nano</li>
-            </ul>
-          </div>
-          <div>
-            <h1>Currently i'm working at<br/>none</h1>
-          </div>
-        </article>
-      </section>
-    </div>
-  );
+class About extends React.Component {
+  constructor(props)
+  {
+    super(props);
+    this.state ={
+      po_body: ""
+    };
+  }
+
+  componentDidMount()
+  {
+    axios.get('https://raw.githubusercontent.com/good-jinu/good-jinu/main/README.md')
+    .then((res)=> {
+      this.setState({po_body: res.data});
+    })
+    .catch((err)=>{
+      console.error(err);
+    });
+  }
+
+  render() {
+    return (
+      <div className="mainbody">
+        <section>
+          <article className="whoAmI responsive-font">
+            <div>LEE JIN WOO</div>
+            <div>University student</div>
+            <div>Busan, Korea</div>
+          </article>
+          <article className="post-article">
+            <div className="post-body">
+              <ReactMarkdown>{this.state.po_body}</ReactMarkdown>
+            </div>
+          </article>
+        </section>
+      </div>
+    );
+  }
 }
 
 export default About;

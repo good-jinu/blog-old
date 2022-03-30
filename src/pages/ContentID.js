@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import './ContentID.css'
+import './CSS/Poststyle.css'
 
 class ContentID extends React.Component {
 	constructor(props) {
@@ -14,7 +14,7 @@ class ContentID extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('/blog/contents-datas.json')
+		axios.get('https://raw.githubusercontent.com/good-jinu/TIL/master/index_blog.json')
 		.then((res)=> {
 			var targetId = this.cid;
 			var arrindex = Math.floor(res.data.length/2);

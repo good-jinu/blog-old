@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './Contents.css';
+import './CSS/Contents.css';
 
 class Contents extends React.Component {
   constructor(props) {
@@ -16,18 +16,18 @@ class Contents extends React.Component {
 		this.getDatasFromServer();
 	}
 
-	async getDatasFromServer() {
+	getDatasFromServer() {
 		var rows = [];
-		await axios.get('/blog/contents-datas.json')
+		axios.get('https://raw.githubusercontent.com/good-jinu/TIL/master/index_blog.json')
 		.then((res)=> {
 			for(let iii=res.data.length-1;iii>=0; iii--) {
 				rows.push(res.data[iii]);
 			}
+			this.setState({posts: rows});
 		})
 		.catch((err)=>{
 			console.log(err);
 		});
-		await this.setState({posts: rows});
 	}
 
 	render() {
