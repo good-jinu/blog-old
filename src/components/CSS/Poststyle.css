@@ -1,14 +1,6 @@
-.post-article {
-    width: 97%;
-    max-width: 240mm;
-}
-.post-title {
-    font-size: 2.2em;
-    margin-top: 0.25em;
-    color: #eadede;
-}
-
 .post-body {
+    width: 92%;
+    max-width: 240mm;
     text-align: left;
     background-color: #080f0f;
     color: #c2d0d0;
@@ -32,6 +24,7 @@
 	border-left-width: 1mm;
 	border-left-color: #939393;
 	border-left-style: solid;
+    color: #808080;
 }
 
 .post-body pre {
@@ -45,4 +38,8 @@
 
 .post-body img {
     max-width: 100%;
+}
+
+.post-body > pre {
+    overflow: scroll visible;
 }

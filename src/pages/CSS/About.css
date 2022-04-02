@@ -7,12 +7,20 @@ section {
   width: 100vw;
 }
 
+section > article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 article.whoAmI {
   text-align: right;
-  width: 100%;
 }
 
 article.whoAmI div {
+  width: 100%;
   color: #9fccff;
   font-weight: bold;
 }
