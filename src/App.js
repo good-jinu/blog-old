@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import { Home } from './pages';
+import { Home, Club } from './pages';
 import routes from './routes';
 import {setCookie, getCookie} from './jslib/CookieIO';
 
@@ -35,6 +35,7 @@ class App extends React.Component {
         {this.openBox}
         <Switch>
           <Route exact path="/" component={Home}/>
+          <Route exact path="/club" component={Club}/>
           <Route path="/:pth" component={routes}/>
         </Switch>
       </div>
