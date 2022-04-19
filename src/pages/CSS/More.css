@@ -1,0 +1,27 @@
+@media screen and (max-width: 900px) {
+    #morelist {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        font-size: 28px;
+    }
+}
+  
+@media screen and (min-width: 900px) {
+    #morelist {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 59px;
+    }
+}
+
+.morebox {
+    width: 90%;
+    max-width: 200mm;
+    text-align: center;
+    font-weight: 800;
+    background-color: #080f0f;
+    color: #c2d0d0;
+    padding: 3% 20px;
+    border-radius: 25px;
+}
