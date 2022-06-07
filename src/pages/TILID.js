@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Posting } from '../components';
 import './CSS/ContentID.css';
 
-class ContentID extends React.Component {
+class TILID extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state={
@@ -38,4 +38,4 @@ class ContentID extends React.Component {
 	}
 }
 
-export default ContentID;
+export default TILID;

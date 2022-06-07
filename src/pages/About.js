@@ -7,7 +7,7 @@ class About extends React.Component {
   {
     super(props);
     this.state ={
-      mdpath: "https://raw.githubusercontent.com/good-jinu/good-jinu/main/README.md"
+      mdpath: "https://raw.githubusercontent.com/good-jinu/good-jinu/main/README_old.md"
     };
   }
 

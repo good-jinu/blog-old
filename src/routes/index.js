@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import { About, ContentID, Contents, More } from '../pages';
+import { About, TILID, TIL, More } from '../pages';
 import { Header, Footer } from '../pages/structure';
 
 export default function routes() {
@@ -8,8 +8,8 @@ export default function routes() {
     <Header />
     <Switch>
       <Route path="/about" component={About}/>
-      <Route path="/contents/:cid" component={ContentID}/>
-      <Route path="/contents"  component={Contents}/>
+      <Route path="/TIL/:cid" component={TILID}/>
+      <Route path="/TIL"  component={TIL}/>
       <Route path="/more" component={More}/>
     </Switch>
     <Footer/>

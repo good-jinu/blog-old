@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './CSS/Contents.css';
 
-class Contents extends React.Component {
+class TIL extends React.Component {
   constructor(props) {
 		super(props);
 		this.state = {
@@ -32,7 +32,7 @@ class Contents extends React.Component {
 
 	render() {
 		const showPostings = this.state.posts.map((item, index)=>
-			<Link to={"/contents/"+(this.state.posts.length-index-1).toString()} key={index.toString()}>
+			<Link to={"/TIL/"+(this.state.posts.length-index-1).toString()} key={index.toString()}>
 				<div className="posting">
 					<h1>{item.title}</h1>
 					<p>{item.desc}</p>
@@ -52,4 +52,4 @@ class Contents extends React.Component {
 	}
 }
 
-export default Contents;
+export default TIL;
