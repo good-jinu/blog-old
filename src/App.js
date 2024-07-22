@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { Home, Club } from './pages';
 import routes from './routes';
 import {setCookie, getCookie} from './jslib/CookieIO';
+import CatPage from "./pages/cat";
 
 class App extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/club" component={Club}/>
+          <Route exact path="/cat" component={CatPage} />
           <Route path="/:pth" component={routes}/>
         </Switch>
       </div>
