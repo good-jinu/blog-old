@@ -1,6 +1,6 @@
 {
   "homepage": "https://good-jinu.github.io/blog-old/",
-  "name": "react_ex",
+  "name": "blog-old",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
